@@ -1,0 +1,28 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+  img {
+    width: 150px;
+    height: 150px;
+  }
+  .wrap {
+    align-items: center;
+  }
+  .product {
+    display: inline-block;
+    width: 17vw;
+  }
+  @media (max-width: 900px) {
+    .product {
+      width: 32vw;
+    }
+    img {
+      width: 120px;
+      height: 120px;
+    }
+  }
+  a {
+    cursor: pointer;
+  }
+  

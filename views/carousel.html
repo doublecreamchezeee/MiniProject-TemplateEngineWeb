@@ -1,0 +1,43 @@
+<div class="carousels d-flex justify-content-center mb-4 ">
+    <div id="carouselNewestMovie" class="carousel slide w-30">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselNewestMovie" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselNewestMovie" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselNewestMovie" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        <!-- Add more indicators if needed -->
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active" @click="showMovieInfo(incomeMovies[0].id)">
+          <img src="{{ incomeMovies[0].image }}" class="d-block w-100" alt="..." width="200" height="500">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>{{ incomeMovies[0].title }}</h5>
+            <p>Length: <span>{{ incomeMovies[0].runtimeStr }}</span> - Rating: <span>{{ incomeMovies[0].ratings.imDb }}</span></p>
+          </div>
+        </div>
+        <div class="carousel-item" @click="showMovieInfo(incomeMovies[1].id)">
+          <img src="{{ incomeMovies[1].image }}" class="d-block w-100" alt="..." width="200" height="500">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>{{ incomeMovies[1].title }}</h5>
+            <p>Length: <span>{{ incomeMovies[1].runtimeStr }}</span> - Rating: <span>{{ incomeMovies[1].ratings.imDb }}</span></p>
+          </div>
+        </div>
+        <div class="carousel-item" @click="showMovieInfo(incomeMovies[2].id)">
+          <img src="{{ incomeMovies[2].image }}" class="d-block w-100" alt="..." width="200" height="500">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>{{ incomeMovies[2].title }}</h5>
+            <p>Length: <span>{{ incomeMovies[2].runtimeStr }}</span> - Rating: <span>{{ incomeMovies[2].ratings.imDb }}</span></p>
+          </div>
+        </div>
+        <!-- Add more items if needed -->
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselNewestMovie" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselNewestMovie" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </div>
+  
